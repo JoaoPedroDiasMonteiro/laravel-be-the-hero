@@ -10,4 +10,9 @@ class WebController extends Controller
     {
         return view('web.logon');
     }
+
+    public function newIncident()
+    {
+        return view('web.newIncident');
+    }
 }

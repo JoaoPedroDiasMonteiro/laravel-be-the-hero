@@ -10,3 +10,14 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+/public/js/app.js
+/.idea/be-the-hero.iml
+/.idea/deployment.xml
+/.idea/laravel-plugin.xml
+/.idea/misc.xml
+/public/mix-manifest.json
+/.idea/modules.xml
+/public/web/js/scripts.js
+/public/web/css/styles.css
+/.idea/vcs.xml
+/public/web/css/web.css

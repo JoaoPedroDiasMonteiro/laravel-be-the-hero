@@ -12,7 +12,7 @@
                     type="text"/>
                 <button class="button">Entrar</button>
 
-                <a class="back-link" href="/register">Não tenho cadastro </a>
+                <a class="back-link" href="{{route('web.register')}}">Não tenho cadastro </a>
             </form>
         </section>
         <img src="{{url('web/images/heroes.png')}}" alt="heroes"/>

@@ -7,7 +7,7 @@
             <h1>Cadastrar novo caso</h1>
             <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
 
-            <a class="back-link" href="/profile">
+            <a class="back-link" href="{{route('web.profile')}}">
                 Voltar para home
             </a>
         </section>

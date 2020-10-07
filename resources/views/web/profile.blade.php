@@ -7,7 +7,7 @@
         <span>Bem vinda, {this.state.ongName}</span>
 
         <div class="actions">
-            <a class="button" href="/incidents/new">Cadastrar novo caso</a>
+            <a class="button" href="{{route('web.incident.new')}}">Cadastrar novo caso</a>
             <button onClick={this.handleLogout}>
                 Sair
             </button>
@@ -18,7 +18,7 @@
     <h1>Casos Cadastrados:</h1>
 
     <ul>
-        <li key={incident.id}>
+        <li>
             <strong>CASO:</strong>
             <p>{incident.title}</p>
 

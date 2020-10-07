@@ -15,4 +15,9 @@ class WebController extends Controller
     {
         return view('web.newIncident');
     }
+
+    public function profile()
+    {
+        return view('web.profile');
+    }
 }

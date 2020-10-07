@@ -20,4 +20,9 @@ class WebController extends Controller
     {
         return view('web.profile');
     }
+
+    public function register()
+    {
+        return view('web.register');
+    }
 }

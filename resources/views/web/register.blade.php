@@ -15,26 +15,37 @@
                 </a>
             </section>
 
-            <form onSubmit={this.handleRegister}>
+            <form method="post" action="{{route('web.post.register')}}">
+                @csrf
                 <input
+                    name="ong"
                     required
                     placeholder="Nome da ONG"
                     type="text"/>
                 <input
+                    name="email"
                     required
                     placeholder="E-mail"
                     type="email"/>
                 <input
+                    name="password"
+                    required
+                    placeholder="Senha"
+                    type="password"/>
+                <input
+                    name="whatsapp"
                     required
                     placeholder="WhatsApp"
                     type="text"/>
                 <div class="input-group">
                     <input
+                        name="city"
                         required
                         placeholder="Cidade"
                         type="text"
                         style="width: calc(100% - 80px)"/>
                     <input
+                        name="uf"
                         required
                         placeholder="UF"
                         type="text"

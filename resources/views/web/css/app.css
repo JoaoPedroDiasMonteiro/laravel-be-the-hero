@@ -94,11 +94,11 @@ form textarea {
     color: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-    animation:error_animation 0.5s 1;
-    -webkit-animation:error_animation 0.5s 1;
+    animation:error_animation 2s 1;
+    -webkit-animation:error_animation 2s 1;
     animation-fill-mode: forwards;
 
-    animation-delay:2s;
+    animation-delay:3s;
     -webkit-animation-delay:1s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
 }

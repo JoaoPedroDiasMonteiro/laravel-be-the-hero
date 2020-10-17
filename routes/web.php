@@ -32,5 +32,6 @@ Route::get('/incident/new', [App\Http\Controllers\WebController::class, 'newInci
     ->name('web.incident.new');
 Route::post('/incident', [App\Http\Controllers\WebController::class, 'storeIncident'])->middleware('auth')
     ->name('web.incident.store');
-
+Route::delete('/incident/{incident}', [App\Http\Controllers\WebController::class, 'destroyIncident'])->middleware('auth')
+    ->name('web.incident.destroy');
 

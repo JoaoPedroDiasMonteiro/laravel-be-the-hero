@@ -32,9 +32,14 @@
                     <strong>VALOR:</strong>
                     <p>R$ {{str_replace('.', ',', $incident->value)}}</p>
 
-                    <button class="trash-button" type="button">
-                        Excluir
-                    </button>
+                    <form method="post" action="{{route('web.incident.destroy', $incident->id)}}">
+                        @csrf
+                        @method('delete')
+                        <button class="trash-button" type="submit">
+                            Excluir
+                        </button>
+                    </form>
+
                 </li>
             </ul>
         @endforeach

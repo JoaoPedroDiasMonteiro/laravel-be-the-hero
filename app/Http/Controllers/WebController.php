@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DestroyIncident;
 use App\Http\Requests\StoreIncident;
 use App\Models\Incident;
 use Illuminate\Support\Facades\Auth;
@@ -28,6 +29,13 @@ class WebController extends Controller
         $incident->description = $validated->description;
         $incident->value = $validated->value;
         $incident->save();
+
+        return redirect(route('web.profile'));
+    }
+
+    public function destroyIncident(DestroyIncident $request, Incident $incident)
+    {
+        $request->incident->delete();
 
         return redirect(route('web.profile'));
     }

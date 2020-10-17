@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginAuthenticate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,7 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function authenticate(Request $request)
+    public function authenticate(LoginAuthenticate $request)
     {
         $credentials = $request->only('email', 'password');
 
@@ -23,7 +24,7 @@ class LoginController extends Controller
             // Authentication passed...
             return redirect()->intended('profile');
         }
-        return redirect(route('web.logon'));
+        return redirect(route('web.logon'))->withErrors(['Bad credentials. Please login again.']);
     }
 
     /**

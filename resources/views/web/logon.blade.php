@@ -3,6 +3,15 @@
 
 @section('content')
     <div class="logon-container">
+        @if ($errors->any())
+            <div class="error_msg">
+                @foreach ($errors->all() as $error)
+                    <span class="error_content">
+                            {{ $error }}
+                            </span>
+                @endforeach
+            </div>
+        @endif
         <section class="form">
             <img src="{{url('web/images/logo.svg')}}" alt="Be The Hero" title="Be The Hero"/>
             <form method="post" action="{{route('web.post.logon')}}">

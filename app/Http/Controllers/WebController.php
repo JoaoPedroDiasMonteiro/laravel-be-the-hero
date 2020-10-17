@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreIncident;
+use App\Models\Incident;
+use Illuminate\Support\Facades\Auth;
 
 class WebController extends Controller
 {
@@ -16,9 +18,25 @@ class WebController extends Controller
         return view('web.newIncident');
     }
 
+    public function storeIncident(StoreIncident $request)
+    {
+        $validated = (object) $request->validated();
+
+        $incident = new Incident();
+        $incident->user_id = Auth::user()->id;
+        $incident->title = $validated->title;
+        $incident->description = $validated->description;
+        $incident->value = $validated->value;
+        $incident->save();
+
+        return redirect(route('web.profile'));
+    }
+
     public function profile()
     {
-        return view('web.profile');
+        $incidents = Auth::user()->incidents();
+
+        return view('web.profile', ['incidents' => $incidents]);
     }
 
     public function register()

@@ -34,9 +34,10 @@ class WebController extends Controller
 
     public function profile()
     {
-        $incidents = Auth::user()->incidents();
+        $incidents = Auth::user()->incidents()->orderBy('created_at', 'DESC')->get();
+        $user = Auth::user();
 
-        return view('web.profile', ['incidents' => $incidents]);
+        return view('web.profile', ['incidents' => $incidents, 'user' => $user]);
     }
 
     public function register()

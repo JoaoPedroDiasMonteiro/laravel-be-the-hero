@@ -43,6 +43,6 @@ class User extends Authenticatable
 
     public function incidents()
     {
-        $this->hasMany(Incident::class);
+       return $this->hasMany(Incident::class);
     }
 }

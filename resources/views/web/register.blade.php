@@ -5,6 +5,17 @@
 
     <div class="register-container">
         <div class="content">
+
+            @if ($errors->any())
+                <div class="error_msg">
+                    @foreach ($errors->all() as $error)
+                        <span class="error_content">
+                            {{ $error }}
+                            </span>
+                    @endforeach
+                </div>
+            @endif
+
             <section>
                 <img src="{{asset('web/images/logo.svg')}}" alt="Be The Hero"/>
                 <h1>Cadastro</h1>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterUser;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -24,7 +25,10 @@ class UserController extends Controller
 
         $user->save();
 
-        return (new LoginController())->authenticate($request);
+        $credentials = $request->only('email', 'password');
+
+        Auth::attempt($credentials);
+        return redirect()->intended('profile');
     }
 
     public function update(Request $request, User $user)

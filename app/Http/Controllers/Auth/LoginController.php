@@ -30,8 +30,10 @@ class LoginController extends Controller
     /**
      * Logout user
      */
-    public function logout(): void
+    public function logout()
     {
         Auth::logout();
+
+        return redirect(route('web.post.logon'));
     }
 }

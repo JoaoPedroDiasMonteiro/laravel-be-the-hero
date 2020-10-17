@@ -3,13 +3,14 @@
 
 <div class="profile-container">
     <header>
-        <img src="{{asset('web/images/logo.svg')}}" alt="Be The Hero" />
+        <img src="{{asset('web/images/logo.svg')}}" alt="Be The Hero"/>
         <span>Bem vinda, {this.state.ongName}</span>
 
         <div class="actions">
             <a class="button" href="{{route('web.incident.new')}}">Cadastrar novo caso</a>
-            <button onClick={this.handleLogout}>
-                Sair
+            <button>
+                <a style="text-decoration: unset; width: 100%; height: 100%; display: block; line-height: 3.3; color: black"
+                   href="{{route('web.logout')}}">Sair</a>
             </button>
         </div>
 

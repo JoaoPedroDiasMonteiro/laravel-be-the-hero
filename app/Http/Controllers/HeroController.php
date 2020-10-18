@@ -12,4 +12,9 @@ class HeroController extends Controller
 
         return view('web.hero.home', ['incidents' => $incidents]);
     }
+
+    public function details(Incident $incident)
+    {
+        return view('web.hero.details', ['incident' => $incident, 'ong' => $incident->user()->first()]);
+    }
 }

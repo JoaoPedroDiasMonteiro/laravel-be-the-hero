@@ -22,6 +22,7 @@ Route::get('/', function () {
 })->name('web.home');
 
 Route::get('/hero', [\App\Http\Controllers\HeroController::class, 'home'])->name('web.hero.home');
+Route::get('/hero/incident/{incident}', [\App\Http\Controllers\HeroController::class, 'details'])->name('web.hero.details');
 
 
 /*

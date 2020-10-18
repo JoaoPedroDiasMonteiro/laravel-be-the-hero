@@ -87,3 +87,51 @@
     order: 2;
 }
 
+
+
+.contactBox {
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 16px;
+}
+
+.heroTitle {
+    font-weight: bold;
+    font-size: 20px;
+    color: #13131a;
+    line-height: 3;
+}
+
+.heroDescription {
+    font-size: 15px;
+    color: #737380;
+    margin-top: 16px;
+}
+
+.actions {
+    margin-top: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.action {
+    background-color: #e02041;
+    border-radius: 8px;
+    height:50px;
+    width: 48%;
+    max-width: 220px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.actionText {
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: bold;
+}

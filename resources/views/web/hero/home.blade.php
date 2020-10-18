@@ -28,7 +28,8 @@
                         <p class="incidentValue">R$ {{str_replace('.', ',', $incident->value)}}</p>
 
                         <button style="max-width: 250px" class="button">
-                            Ver mais detalhes
+                            <a style="width: 100%; height: 100%; display: block"
+                               href="{{route('web.hero.details', $incident->id)}}">Ver mais detalhes</a>
                         </button>
                     </div>
                 </div>

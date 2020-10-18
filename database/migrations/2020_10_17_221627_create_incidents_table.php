@@ -17,7 +17,7 @@ class CreateIncidentsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('value');
             $table->timestamps();
         });

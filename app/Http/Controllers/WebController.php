@@ -11,12 +11,12 @@ class WebController extends Controller
 {
     public function Logon()
     {
-        return view('web.logon');
+        return view('web.ong.logon');
     }
 
     public function newIncident()
     {
-        return view('web.newIncident');
+        return view('web.ong.newIncident');
     }
 
     public function storeIncident(StoreIncident $request)
@@ -45,11 +45,11 @@ class WebController extends Controller
         $incidents = Auth::user()->incidents()->orderBy('created_at', 'DESC')->get();
         $user = Auth::user();
 
-        return view('web.profile', ['incidents' => $incidents, 'user' => $user]);
+        return view('web.ong.profile', ['incidents' => $incidents, 'user' => $user]);
     }
 
     public function register()
     {
-        return view('web.register');
+        return view('web.ong.register');
     }
 }

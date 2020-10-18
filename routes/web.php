@@ -13,9 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+ * Hero Routes
+ */
+
 Route::get('/', function () {
     return view('web.home');
 })->name('web.home');
+
+Route::get('/hero', [\App\Http\Controllers\HeroController::class, 'home'])->name('web.hero.home');
 
 
 /*
@@ -42,6 +48,7 @@ Route::get('/incident/new', [App\Http\Controllers\WebController::class, 'newInci
 Route::post('/incident', [App\Http\Controllers\WebController::class, 'storeIncident'])->middleware('auth')
     ->name('web.incident.store');
 
-Route::delete('/incident/{incident}', [App\Http\Controllers\WebController::class, 'destroyIncident'])->middleware('auth')
+Route::delete('/incident/{incident}',
+    [App\Http\Controllers\WebController::class, 'destroyIncident'])->middleware('auth')
     ->name('web.incident.destroy');
 

@@ -19,9 +19,9 @@
             window.location.href = '{{route('web.logon')}}'
         });
 
-        const help = document.getElementById('ong');
+        const help = document.getElementById('help');
         help.addEventListener('click', function () {
-            window.location.href = '{{route('web.logon')}}'
+            window.location.href = '{{route('web.hero.home')}}'
         })
     </script>
 @endsection
